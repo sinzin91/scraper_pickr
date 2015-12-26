@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Scraper Pickr</title>
+	<script type="text/javascript">
+	var scraperIndex = 0;
+	var scraperForm = document.scraperForm;
+
+
+	function radioToggle_onclick()
+	{
+		if (document.scraperForm.urlInsertion.checked == true)
+		{
+			document.scraperForm.search.checked == false;
+		} 
+		else if (document.scraperForm.search.checked == true)
+		{
+			document.scraperForm.urlInsertion.checked == false;
+		}
+	}
+
+	function displayScraper_onsubmit()
+	{
+		if (document.scraperForm.urlInsertion.checked == true)
+		{
+			if (document.scraperForm.Javascript.checked == true) 
+			{
+				if (document.scraperForm.Filter.checked == true) 
+				{
+					if (document.scraperForm.ListAndSale.checked == true) 
+					{
+						alert("URL | JS | List+Sale | Filter: ");
+					} 
+					else if (document.scraperForm.InCart.checked == true)
+					{
+						alert("URL | JS | In-cart | Filter: ");
+					} 
+					else if (document.scraperForm.CSE.checked == true)
+					{
+						alert("URL | JS | CSE | Filter: ");
+					}
+					else 
+					{
+						alert("URL | JS | Just List | Filter:");
+					} 
+				}
+				else // no filter
+				{
+					if (document.scraperForm.ListAndSale.checked == true) 
+					{
+						alert("URL | JS | List+Sale | No Filter: ");
+					} 
+					else if (document.scraperForm.InCart.checked == true)
+					{
+						alert("URL | JS | In-cart | No Filter: g/gettington.com_incart_southshore.json");
+					} 
+					else if (document.scraperForm.CSE.checked == true)
+					{
+						alert("URL | JS | CSE | No Filter: n/newegg.com_gogotech.json");
+					}
+					else 
+					{
+						alert("URL | JS | Just List | No Filter: a/AvastUS_mcafee.json");
+					} 
+				}
+			}
+			else // no JS
+			{
+				if (document.scraperForm.Filter.checked == true) 
+				{
+					if (document.scraperForm.ListAndSale.checked == true) 
+					{
+						alert("URL | No JS | List+Sale | Filter: b/boscovs.com_southshore.json");
+					} 
+					else if (document.scraperForm.InCart.checked == true)
+					{
+						alert("URL | No JS | In-cart | Filter: ");
+					} 
+					else if (document.scraperForm.CSE.checked == true)
+					{
+						alert("URL | No JS | CSE | Filter: ");
+					}
+					else 
+					{
+						alert("URL | No JS | Just List | Filter:");
+					} 
+				}
+				else
+				{
+					if (document.scraperForm.ListAndSale.checked == true) 
+					{
+						alert("URL | No JS | List+Sale | No Filter: ");
+					} 
+					else if (document.scraperForm.InCart.checked == true)
+					{
+						alert("URL | No JS | In-cart | No Filter: ");
+					} 
+					else if (document.scraperForm.CSE.checked == true)
+					{
+						alert("URL | No JS | CSE | No Filter: ");
+					}
+					else 
+					{
+						alert("URL | No JS | Just List | No Filter:");
+					} 
+				}
+			}
+		}
+		else // search
+		{
+			if (document.scraperForm.Javascript.checked == true) 
+			{
+				if (document.scraperForm.Filter.checked == true) 
+				{
+					if (document.scraperForm.DirectToProduct.checked == true) 
+					{
+						if (document.scraperForm.ListAndSale.checked == true) 
+						{
+							alert("Search | DirectToProduct| JS | List+Sale | Filter: ");
+						} 
+						else if (document.scraperForm.InCart.checked == true)
+						{
+							alert("Search | DirectToProduct| JS | In-cart | Filter: ");
+						} 
+						else if (document.scraperForm.CSE.checked == true)
+						{
+							alert("Search | DirectToProduct| JS | CSE | Filter: ");
+						}
+						else 
+						{
+							alert("Search | DirectToProduct| JS | Just List | Filter:");
+						} 
+					}
+					else // search listing
+					{
+						if (document.scraperForm.ListAndSale.checked == true) 
+						{
+							alert("Search | Search Listing | JS | List+Sale | Filter: ");
+						} 
+						else if (document.scraperForm.InCart.checked == true)
+						{
+							alert("Search | Search Listing | JS | In-cart | Filter: ");
+						} 
+						else if (document.scraperForm.CSE.checked == true)
+						{
+							alert("Search | Search Listing | JS | CSE | Filter: ");
+						}
+						else 
+						{
+							alert("Search | Search Listing | JS | Just List | Filter:");
+						} 
+					}
+				}
+				else // no filter
+				{
+					if (document.scraperForm.DirectToProduct.checked == true) 
+					{
+						if (document.scraperForm.ListAndSale.checked == true) 
+						{
+							alert("Search | DirectToProduct| JS | List+Sale | No Filter: ");
+						} 
+						else if (document.scraperForm.InCart.checked == true)
+						{
+							alert("Search | DirectToProduct| JS | In-cart | No Filter: ");
+						} 
+						else if (document.scraperForm.CSE.checked == true)
+						{
+							alert("Search | DirectToProduct| JS | CSE | No Filter: ");
+						}
+						else 
+						{
+							alert("Search | DirectToProduct| JS | Just List | No Filter:");
+						} 
+					}
+					else // search listing
+					{
+						if (document.scraperForm.ListAndSale.checked == true) 
+						{
+							alert("Search | Search Listing | JS | List+Sale | No Filter: ");
+						} 
+						else if (document.scraperForm.InCart.checked == true)
+						{
+							alert("Search | Search Listing | JS | In-cart | No Filter: ");
+						} 
+						else if (document.scraperForm.CSE.checked == true)
+						{
+							alert("Search | Search Listing | JS | CSE | No Filter: ");
+						}
+						else 
+						{
+							alert("Search | Search Listing | JS | Just List | No Filter:");
+						} 
+					}
+				}
+			}
+			else // no JS
+			{
+				if (document.scraperForm.Filter.checked == true) 
+				{
+					if (document.scraperForm.DirectToProduct.checked == true) 
+					{
+						if (document.scraperForm.ListAndSale.checked == true) 
+						{
+							alert("Search | DirectToProduct| No JS | List+Sale | Filter: ");
+						} 
+						else if (document.scraperForm.InCart.checked == true)
+						{
+							alert("Search | DirectToProduct| No JS | In-cart | Filter: ");
+						} 
+						else if (document.scraperForm.CSE.checked == true)
+						{
+							alert("Search | DirectToProduct| No JS | CSE | Filter: ");
+						}
+						else 
+						{
+							alert("Search | DirectToProduct| No JS | Just List | Filter:");
+						} 
+					}
+					else // search listing
+					{
+						if (document.scraperForm.ListAndSale.checked == true) 
+						{
+							alert("Search | Search Listing | No JS | List+Sale | Filter: ");
+						} 
+						else if (document.scraperForm.InCart.checked == true)
+						{
+							alert("Search | Search Listing | No JS | In-cart | Filter: ");
+						} 
+						else if (document.scraperForm.CSE.checked == true)
+						{
+							alert("Search | Search Listing | No JS | CSE | Filter: ");
+						}
+						else 
+						{
+							alert("Search | Search Listing | No JS | Just List | Filter:");
+						} 
+					}
+				}
+				else // no filter
+				{
+					if (document.scraperForm.DirectToProduct.checked == true) 
+					{
+						if (document.scraperForm.ListAndSale.checked == true) 
+						{
+							alert("Search | DirectToProduct| No JS | List+Sale | No Filter: ");
+						} 
+						else if (document.scraperForm.InCart.checked == true)
+						{
+							alert("Search | DirectToProduct| No JS | In-cart | No Filter: ");
+						} 
+						else if (document.scraperForm.CSE.checked == true)
+						{
+							alert("Search | DirectToProduct| No JS | CSE | No Filter: ");
+						}
+						else 
+						{
+							alert("Search | DirectToProduct| No JS | Just List | No Filter:");
+						} 
+					}
+					else // search listing
+					{
+						if (document.scraperForm.ListAndSale.checked == true) 
+						{
+							alert("Search | Search Listing | No JS | List+Sale | No Filter: ");
+						} 
+						else if (document.scraperForm.InCart.checked == true)
+						{
+							alert("Search | Search Listing | No JS | In-cart | No Filter: ");
+						} 
+						else if (document.scraperForm.CSE.checked == true)
+						{
+							alert("Search | Search Listing | No JS | CSE | No Filter: ");
+						}
+						else 
+						{
+							alert("Search | Search Listing | No JS | Just List | No Filter:");
+						} 
+					}
+				}
+			} 
+		} 
+		alert("Wtf");
+	}
+	</script>
+</head>
+
+<body>
+	<form action="" name="scraperForm">
+		<h1>Scraper Pickr</h1>
+		<h2>Select the variables that describe your scraper</h2>
+		<table>
+			<tr>
+				<td>URL Scraper</td>
+				<td>
+					<input name="urlInsertion" type="checkbox" value="URLInsertion" onclick="return radioToggle_onclick()" checked="checked">
+				</td>
+			</tr>
+			<tr>
+				<td>Search Scraper</td>
+				<td>
+					<input name="search" type="checkbox" value="Search" onclick="return radioToggle_onclick()">
+				</td>
+			</tr>
+			<tr>
+				<td>Direct To Product</td>
+				<td>
+					<input name="DirectToProduct" type="checkbox" value="DirectToProduct" onclick="return radioToggle_onclick()">
+				</td>
+			</tr>
+			<tr>
+				<td>Javascript</td>
+				<td>
+					<input name="Javascript" type="checkbox" value="Javascript" onclick="return radioToggle_onclick()">
+				</td>
+			</tr>
+			<tr>
+				<td>List and Sale</td>
+				<td>
+					<input name="ListAndSale" type="checkbox" value="ListAndSale" onclick="return radioToggle_onclick()">
+				</td>
+			</tr>
+			<tr>
+				<td>In-Cart</td>
+				<td>
+					<input name="InCart" type="checkbox" value="InCart" onclick="return radioToggle_onclick()">
+				</td>
+			</tr>
+			<tr>
+				<td>Comparison Shopping Engine</td>
+				<td>
+					<input name="CSE" type="checkbox" value="CSE" onclick="return radioToggle_onclick()">
+				</td>
+			</tr>
+			<tr>
+				<td> Filter</td>
+				<td>
+					<input name="Filter" type="checkbox" value="Filter" onclick="return radioToggle_onclick()">
+				</td>
+			</tr>
+		</table>
+		<input type="button" value="Check Form" name="btnCheck" onclick="return displayScraper_onsubmit()">
+	</form>
+</body>
+</html>
