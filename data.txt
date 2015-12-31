@@ -17,11 +17,11 @@ URL | No-JS | CSE | No Wiser Filter: n/neweggbusiness.com_telquest.json
 URL | No-JS | Just List | No Wiser Filter:
 
 Search | Direct to Product | JS | List+Sale | Wiser Filter: h/homedepot.com_listsale_southshore.json
-Search | Direct to Product | JS | In-cart | Wiser Filter:
+Search | Direct to Product | JS | In-cart | Wiser Filter: b/bestbuy.ca_incart_southshore.json
 Search | Direct to Product | JS | CSE | Wiser Filter:
 Search | Direct to Product | JS | Just List | Wiser Filter:
 Search | Search Listing | JS | List+Sale | Wiser Filter: c/cymax.ca_listsale_southshore.json
-Search | Search Listing | JS | In-cart | Wiser Filter: b/bestbuy.ca_incart_southshore.json
+Search | Search Listing | JS | In-cart | Wiser Filter: 
 Search | Search Listing | JS | CSE | Wiser Filter:
 Search | Search Listing | JS | Just List | Wiser Filter:
 
@@ -40,7 +40,7 @@ Search | Direct to Product | No-JS | CSE | Wiser Filter:
 Search | Direct to Product | No-JS | Just List | Wiser Filter: c/cpooutlets.com_totaltools.json
 Search | Search Listing | No-JS | List+Sale | Wiser Filter: p/prokit.com_proav.json
 Search | Search Listing | No-JS | In-cart | Wiser Filter: N/A
-Search | Search Listing | No-JS | CSE | Wiser Filter:
+Search | Search Listing | No-JS | CSE | Wiser Filter: 
 Search | Search Listing | No-JS | Just List | Wiser Filter: 0-9/3dbroadcastsales.com_proav.json
 
 Search | Direct to Product | No-JS | List+Sale | No Wiser Filter: b/burlingtoncoatfactory.com_southshore.json

@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>The Scraper Pickr</title>
+
+	<!-- Styles -->
+
+	<!--<link href="css/bootstrap.css" rel="stylesheet">-->
+	<link href="css/style.css" rel="stylesheet">
+
 	<script type="text/javascript">
 	var scraperIndex = 0;
 	var scraperForm = document.scraperForm;
-
 
 	function radioToggle_onclick()
 	{
@@ -101,7 +109,7 @@
 					}
 					else 
 					{
-						alert("URL | No JS | Just List | No Filter:");
+						alert("URL | No JS | Just List | No Filter: c/coppel.com_famsa");
 					} 
 				}
 			}
@@ -120,7 +128,7 @@
 						} 
 						else if (document.scraperForm.InCart.checked == true)
 						{
-							alert("Search | DirectToProduct| JS | In-cart | Filter: ");
+							alert("Search | DirectToProduct| JS | In-cart | Filter:  b/bestbuy.ca_incart_southshore.json");
 						} 
 						else if (document.scraperForm.CSE.checked == true)
 						{
@@ -139,7 +147,7 @@
 						} 
 						else if (document.scraperForm.InCart.checked == true)
 						{
-							alert("Search | Search Listing | JS | In-cart | Filter: b/bestbuy.ca_incart_southshore.json");
+							alert("Search | Search Listing | JS | In-cart | Filter:");
 						} 
 						else if (document.scraperForm.CSE.checked == true)
 						{
@@ -289,55 +297,59 @@
 		<h2>Select the variables that describe your scraper</h2>
 		<table>
 			<tr>
+				<td>
+					<input class="check blue" name="urlInsertion" type="checkbox" value="URLInsertion" onclick="return radioToggle_onclick()" checked="checked">
+				</td>			
 				<td>URL Scraper</td>
-				<td>
-					<input name="urlInsertion" type="checkbox" value="URLInsertion" onclick="return radioToggle_onclick()" checked="checked">
-				</td>
 			</tr>
 			<tr>
+				<td>
+					<input class="check blue" name="search" type="checkbox" value="Search" onclick="return radioToggle_onclick()">
+				</td>
 				<td>Search Scraper</td>
-				<td>
-					<input name="search" type="checkbox" value="Search" onclick="return radioToggle_onclick()">
-				</td>
 			</tr>
 			<tr>
+				<td>
+					<input class="check blue" name="DirectToProduct" type="checkbox" value="DirectToProduct" onclick="return radioToggle_onclick()">
+				</td>
 				<td>Direct To Product</td>
-				<td>
-					<input name="DirectToProduct" type="checkbox" value="DirectToProduct" onclick="return radioToggle_onclick()">
-				</td>
 			</tr>
 			<tr>
+				<td>
+					<input class="check blue" name="Javascript" type="checkbox" value="Javascript" onclick="return radioToggle_onclick()">
+				</td>
 				<td>Javascript</td>
-				<td>
-					<input name="Javascript" type="checkbox" value="Javascript" onclick="return radioToggle_onclick()">
-				</td>
 			</tr>
 			<tr>
+				<td>
+					<input class="check blue" name="ListAndSale" type="checkbox" value="ListAndSale" onclick="return radioToggle_onclick()">
+				</td>
 				<td>List and Sale</td>
-				<td>
-					<input name="ListAndSale" type="checkbox" value="ListAndSale" onclick="return radioToggle_onclick()">
-				</td>
 			</tr>
 			<tr>
+				<td>
+					<input class="check blue" name="InCart" type="checkbox" value="InCart" onclick="return radioToggle_onclick()">
+				</td>
 				<td>In-Cart</td>
-				<td>
-					<input name="InCart" type="checkbox" value="InCart" onclick="return radioToggle_onclick()">
-				</td>
 			</tr>
 			<tr>
+				<td>
+					<input class="check blue" name="CSE" type="checkbox" value="CSE" onclick="return radioToggle_onclick()">
+				</td>
 				<td>Comparison Shopping Engine</td>
-				<td>
-					<input name="CSE" type="checkbox" value="CSE" onclick="return radioToggle_onclick()">
-				</td>
 			</tr>
 			<tr>
-				<td> Filter</td>
 				<td>
-					<input name="Filter" type="checkbox" value="Filter" onclick="return radioToggle_onclick()">
+					<input class="check blue" name="Filter" type="checkbox" value="Filter" onclick="return radioToggle_onclick()">
 				</td>
+				<td> Filter</td>
 			</tr>
 		</table>
 		<input type="button" value="Check Form" name="btnCheck" onclick="return displayScraper_onsubmit()">
 	</form>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
