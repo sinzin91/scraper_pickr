@@ -52,12 +52,12 @@ input[type=checkbox] {
 }
 
 label{
-  background: #34495E;
+  background: #2C3E50;
   height: 69px;
   width: 100%;
   display: block;
-  border-bottom: 1px solid #2C3E50;
-  color: #fff;
+  border-bottom: 1px solid #34495E;
+  color: #1ABC9C;
   font-weight: 900;
   font-size: 11px;
   letter-spacing: 1px;
@@ -75,11 +75,11 @@ label h2 span{
   display: block;
   font-size: 12px;
   font-weight: normal;
-  color: #bdc3c7;
+  /* color: #bdc3c7; */
 }
 
 label:before{
-  content:"";
+/*  content:""; bullet point*/
   width: 20px;
   height: 20px;
   background: #fff;
@@ -100,9 +100,9 @@ label:before{
 #label-6:checked ~ label[for=label-6],
 #label-7:checked ~ label[for=label-7],
 #label-8:checked ~ label[for=label-8]{
-  background: #2C3E50;
+  background: #34495E;
   border-bottom: 1px solid #34495E;
-  color: #1ABC9C;
+  color: #fff;
 }
 
 #label-1:checked ~ label[for=label-1] h2 span,
