@@ -130,48 +130,7 @@ function displayScraper_onsubmit()
 	{
 		if (document.scraperForm.Javascript.checked == true) 
 		{
-			if (document.scraperForm.Filter.checked == true) 
-			{
-				if (document.scraperForm.DirectToProduct.checked == true) 
-				{
-					if (document.scraperForm.ListAndSale.checked == true) 
-					{
-						alert("Search | DirectToProduct| JS | List+Sale | Filter: h/homedepot.com_listsale_southshore.json");
-					} 
-					else if (document.scraperForm.InCart.checked == true)
-					{
-						alert("Search | DirectToProduct| JS | In-cart | Filter:  b/bestbuy.ca_incart_southshore.json");
-					} 
-					else if (document.scraperForm.CSE.checked == true)
-					{
-						alert("Search | DirectToProduct| JS | CSE | Filter: ");
-					}
-					else 
-					{
-						alert("Search | DirectToProduct| JS | Just List | Filter:");
-					} 
-				}
-				else // search listing
-				{
-					if (document.scraperForm.ListAndSale.checked == true) 
-					{
-						alert("Search | Search Listing | JS | List+Sale | Filter: c/cymax.ca_listsale_southshore.json");
-					} 
-					else if (document.scraperForm.InCart.checked == true)
-					{
-						alert("Search | Search Listing | JS | In-cart | Filter:");
-					} 
-					else if (document.scraperForm.CSE.checked == true)
-					{
-						alert("Search | Search Listing | JS | CSE | Filter: ");
-					}
-					else 
-					{
-						alert("Search | Search Listing | JS | Just List | Filter:");
-					} 
-				}
-			}
-			else // no filter
+			if (!document.scraperForm.Filter.checked == true) 
 			{
 				if (document.scraperForm.DirectToProduct.checked == true) 
 				{
@@ -209,6 +168,47 @@ function displayScraper_onsubmit()
 					else 
 					{
 						alert("Search | Search Listing | JS | Just List | No Filter:");
+					} 
+				}
+			}
+			else // filter
+			{
+				if (document.scraperForm.DirectToProduct.checked == true) 
+				{
+					if (document.scraperForm.ListAndSale.checked == true) 
+					{
+						alert("Search | DirectToProduct| JS | List+Sale | Filter: h/homedepot.com_listsale_southshore.json");
+					} 
+					else if (document.scraperForm.InCart.checked == true)
+					{
+						alert("Search | DirectToProduct| JS | In-cart | Filter:  b/bestbuy.ca_incart_southshore.json");
+					} 
+					else if (document.scraperForm.CSE.checked == true)
+					{
+						alert("Search | DirectToProduct| JS | CSE | Filter: ");
+					}
+					else 
+					{
+						alert("Search | DirectToProduct| JS | Just List | Filter:");
+					} 
+				}
+				else // search listing
+				{
+					if (document.scraperForm.ListAndSale.checked == true) 
+					{
+						alert("Search | Search Listing | JS | List+Sale | Filter: c/cymax.ca_listsale_southshore.json");
+					} 
+					else if (document.scraperForm.InCart.checked == true)
+					{
+						alert("Search | Search Listing | JS | In-cart | Filter:");
+					} 
+					else if (document.scraperForm.CSE.checked == true)
+					{
+						alert("Search | Search Listing | JS | CSE | Filter: ");
+					}
+					else 
+					{
+						alert("Search | Search Listing | JS | Just List | Filter:");
 					} 
 				}
 			}
