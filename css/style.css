@@ -101,7 +101,7 @@ label:before{
 #label-7:checked ~ label[for=label-7],
 #label-8:checked ~ label[for=label-8]{
   background: #34495E;
-  border-bottom: 1px solid #34495E;
+  border-bottom: 1px solid #2C3E50;
   color: #fff;
 }
 

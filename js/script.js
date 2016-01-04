@@ -1,42 +1,51 @@
-var scraperIndex = 0;
-var scraperForm = document.scraperForm;
-function radioToggle_onclick()
-{
-	if (document.scraperForm.urlInsertion.checked == true)
-	{
-		document.scraperForm.search.checked == false;
-	} 
-	else if (document.scraperForm.search.checked == true)
-	{
-		document.scraperForm.urlInsertion.checked == false;
-	}
-}
+/* assembled by tenzin wangdhen circa 2015 */
 function displayScraper_onsubmit()
 {
+	/* Bad selection handling */
+
+	// URL and Search selected
+	if (document.scraperForm.urlInsertion.checked && 
+		document.scraperForm.search.checked)
+	{
+		alert("You can't check both URL Insertion AND Search, pick one!");
+		return;
+	}
+
+	// URL and direct to product selected
+	if (document.scraperForm.urlInsertion.checked && 
+		document.scraperForm.DirectToProduct.checked)
+	{
+		alert("URL Insertion is by definition direct to product, pick one!");
+		return;
+	}
+
+	// URL and In-cart selected while JS not selected
+	if (document.scraperForm.urlInsertion.checked == true &&
+		document.scraperForm.InCart.checked == true &&
+		!document.scraperForm.Javascript.checked == true)
+	{
+		alert("In-cart scrapers need Javascript!");
+		return;
+	}
+
+	// More than one of List and Sale/In-cart/CSE selected 
+	if ((document.scraperForm.ListAndSale.checked == true &&
+		document.scraperForm.InCart.checked == true) || 
+		(document.scraperForm.ListAndSale.checked == true &&
+		document.scraperForm.CSE.checked == true) ||
+		(document.scraperForm.InCart.checked == true &&
+		document.scraperForm.CSE.checked == true))
+	{
+		alert("A scraper can only be list and sale, or in-cart, or a comparison shopping engine.  Please pick one.");
+		return;
+	}
+	
+	// Begin scraper pickr logic
 	if (document.scraperForm.urlInsertion.checked == true)
 	{
 		if (document.scraperForm.Javascript.checked == true) 
 		{
-			if (document.scraperForm.Filter.checked == true) 
-			{
-				if (document.scraperForm.ListAndSale.checked == true) 
-				{
-					alert("URL | JS | List+Sale | Filter: ");
-				} 
-				else if (document.scraperForm.InCart.checked == true)
-				{
-					alert("URL | JS | In-cart | Filter: ");
-				} 
-				else if (document.scraperForm.CSE.checked == true)
-				{
-					alert("URL | JS | CSE | Filter: ");
-				}
-				else 
-				{
-					alert("URL | JS | Just List | Filter:");
-				} 
-			}
-			else // no filter
+			if (!document.scraperForm.Filter.checked == true) 
 			{
 				if (document.scraperForm.ListAndSale.checked == true) 
 				{
@@ -53,6 +62,25 @@ function displayScraper_onsubmit()
 				else 
 				{
 					alert("URL | JS | Just List | No Filter: a/AvastUS_mcafee.json");
+				} 
+			}
+			else // filter
+			{
+				if (document.scraperForm.ListAndSale.checked == true) 
+				{
+					alert("URL | JS | List+Sale | Filter: ");
+				} 
+				else if (document.scraperForm.InCart.checked == true)
+				{
+					alert("URL | JS | In-cart | Filter: ");
+				} 
+				else if (document.scraperForm.CSE.checked == true)
+				{
+					alert("URL | JS | CSE | Filter: ");
+				}
+				else 
+				{
+					alert("URL | JS | Just List | Filter:");
 				} 
 			}
 		}
