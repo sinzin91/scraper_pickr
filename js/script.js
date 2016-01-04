@@ -19,7 +19,7 @@ function displayScraper_onsubmit()
 		return;
 	}
 
-	// URL and In-cart selected while JS not selected
+	// URL and In-cart selected while Javascript not selected
 	if (document.scraperForm.urlInsertion.checked == true &&
 		document.scraperForm.InCart.checked == true &&
 		!document.scraperForm.Javascript.checked == true)
