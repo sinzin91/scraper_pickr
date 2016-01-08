@@ -1,7 +1,39 @@
 /* assembled by tenzin wangdhen circa 2015 */
+/* TODO */
+// scraper for every option
+// JS for search listing, product page, or both?
+
+/* Options without scrapers */
+/*
+URL | JS | List+Sale | Wiser Filter: 
+URL | JS | In-cart | Wiser Filter:
+URL | JS | CSE | Wiser Filter:
+URL | JS | Just List | Wiser Filter: 
+URL | JS | List+Sale | No Wiser Filter: 
+URL | No-JS | CSE | Wiser Filter:
+URL | No-JS | Just List | No Wiser Filter:
+Search | Direct to Product | JS | CSE | Wiser Filter:
+Search | Direct to Product | JS | Just List | Wiser Filter:
+Search | Search Listing | JS | In-cart | Wiser Filter: 
+Search | Search Listing | JS | CSE | Wiser Filter:
+Search | Search Listing | JS | Just List | Wiser Filter:
+Search | Direct to Product | JS | List+Sale | No Wiser Filter:
+Search | Direct to Product | JS | CSE | No Wiser Filter:
+Search | Direct to Product | JS | Just List | No Wiser Filter:
+Search | Search Listing | JS | List+Sale | No Wiser Filter:
+Search | Search Listing | JS | CSE | No Wiser Filter:
+Search | Search Listing | JS | Just List | No Wiser Filter:
+Search | Direct to Product | No-JS | CSE | Wiser Filter:
+Search | Search Listing | No-JS | CSE | Wiser Filter: 
+Search | Direct to Product | No-JS | CSE | No Wiser Filter:
+Search | Search Listing | No-JS | List+Sale | No Wiser Filter:
+Search | Search Listing | No-JS | CSE | No Wiser Filter:
+*/
+
 function displayScraper_onsubmit()
 {
 	/* Bad selection handling */
+
 
 	// URL and Search selected
 	if (document.scraperForm.urlInsertion.checked && 
