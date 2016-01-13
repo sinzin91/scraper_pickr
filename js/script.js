@@ -240,7 +240,7 @@ function displayScraper_onsubmit()
 					}
 					else 
 					{
-						alert("Search | Search Listing | JS | Just List | Filter:");
+						alert("Search | Search Listing | JS | Just List | Filter: e/eaccutech.com_anixter.json");
 					} 
 				}
 			}
