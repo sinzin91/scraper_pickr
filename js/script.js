@@ -217,7 +217,7 @@ function displayScraper_onsubmit()
 					} 
 					else if (document.scraperForm.CSE.checked == true)
 					{
-						alert("Search | DirectToProduct| JS | CSE | Filter: ");
+						alert("Search | DirectToProduct| JS | CSE | Filter: m/medizinfuchs.de_eav.json");
 					}
 					else 
 					{
