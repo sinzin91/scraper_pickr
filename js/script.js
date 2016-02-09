@@ -221,7 +221,7 @@ function displayScraper_onsubmit()
 					}
 					else 
 					{
-						alert("Search | DirectToProduct| JS | Just List | Filter:");
+						alert("Search | DirectToProduct| JS | Just List | Filter: e/expert.fi_verkkokauppa.json");
 					} 
 				}
 				else // search listing
@@ -294,7 +294,7 @@ function displayScraper_onsubmit()
 				{
 					if (document.scraperForm.ListAndSale.checked == true) 
 					{
-						alert("Search | DirectToProduct| No JS | List+Sale | No Filter: b/burlingtoncoatfactory.com_southshore.json");
+						alert("Search | DirectToProduct| No JS | List+Sale | No Filter: ");
 					} 
 					else if (document.scraperForm.InCart.checked == true)
 					{
