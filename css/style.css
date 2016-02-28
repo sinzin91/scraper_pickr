@@ -99,7 +99,8 @@ label:before{
 #label-5:checked ~ label[for=label-5],
 #label-6:checked ~ label[for=label-6],
 #label-7:checked ~ label[for=label-7],
-#label-8:checked ~ label[for=label-8]{
+#label-8:checked ~ label[for=label-8],
+#label-9:checked ~ label[for=label-9]{
   background: #34495E;
   border-bottom: 1px solid #2C3E50;
   color: #fff;
@@ -112,7 +113,8 @@ label:before{
 #label-5:checked ~ label[for=label-5] h2 span,
 #label-6:checked ~ label[for=label-6] h2 span,
 #label-7:checked ~ label[for=label-7] h2 span,
-#label-8:checked ~ label[for=label-8] h2 span{
+#label-8:checked ~ label[for=label-8] h2 span,
+#label-9:checked ~ label[for=label-9] h2 span{
   color: #1ABC9C;
 }
 
@@ -125,6 +127,7 @@ label:before{
 #label-5:checked ~ label[for=label-5]:before,
 #label-6:checked ~ label[for=label-6]:before,
 #label-7:checked ~ label[for=label-7]:before,
-#label-8:checked ~ label[for=label-8]:before{
+#label-8:checked ~ label[for=label-8]:before,
+#label-9:checked ~ label[for=label-9]:before{
   background: url("http://designmodo.github.io/Flat-UI/images/todo/done.png") no-repeat center center;
 }

@@ -30,6 +30,8 @@ Search | Search Listing | No-JS | List+Sale | No Wiser Filter:
 Search | Search Listing | No-JS | CSE | No Wiser Filter:
 */
 
+var err_message = "Sorry, no scraper fits this template.  Let Tenzin know if you have one!"
+
 function displayScraper_onsubmit()
 {
 	/* Bad selection handling */
@@ -60,6 +62,18 @@ function displayScraper_onsubmit()
 		return;
 	}
 
+	// MV selected while Javascript not selected
+	if ((document.scraperForm.urlInsertion.checked == true &&
+		document.scraperForm.MV.checked == true &&
+		!document.scraperForm.Javascript.checked == true) ||
+		(document.scraperForm.search.checked == true &&
+		document.scraperForm.MV.checked == true &&
+		!document.scraperForm.Javascript.checked == true))
+	{
+		alert("Multiple variation scrapers need Javascript!");
+		return;
+	}
+
 	// More than one of List and Sale/In-cart/CSE selected 
 	if ((document.scraperForm.ListAndSale.checked == true &&
 		document.scraperForm.InCart.checked == true) || 
@@ -81,7 +95,7 @@ function displayScraper_onsubmit()
 			{
 				if (document.scraperForm.ListAndSale.checked == true) 
 				{
-					alert("URL | JS | List+Sale | No Filter: ");
+					alert("URL | JS | List+Sale | No Filter: " + err_message + err_message);
 				} 
 				else if (document.scraperForm.InCart.checked == true)
 				{
@@ -90,6 +104,10 @@ function displayScraper_onsubmit()
 				else if (document.scraperForm.CSE.checked == true)
 				{
 					alert("URL | JS | CSE | No Filter: n/newegg.com_gogotech.json");
+				}
+				else if (document.scraperForm.MV.checked == true)
+				{
+					alert("URL | JS | MV | No Filter: " + err_message + err_message);
 				}
 				else 
 				{
@@ -100,19 +118,23 @@ function displayScraper_onsubmit()
 			{
 				if (document.scraperForm.ListAndSale.checked == true) 
 				{
-					alert("URL | JS | List+Sale | Filter: ");
+					alert("URL | JS | List+Sale | Filter: " + err_message);
 				} 
 				else if (document.scraperForm.InCart.checked == true)
 				{
-					alert("URL | JS | In-cart | Filter: ");
+					alert("URL | JS | In-cart | Filter: " + err_message);
 				} 
 				else if (document.scraperForm.CSE.checked == true)
 				{
-					alert("URL | JS | CSE | Filter: ");
+					alert("URL | JS | CSE | Filter: " + err_message);
+				}
+				else if (document.scraperForm.MV.checked == true)
+				{
+					alert("URL | JS | MV | Filter: b/bestbuyeyeglasses.com_luxottica.json");
 				}
 				else 
 				{
-					alert("URL | JS | Just List | Filter:");
+					alert("URL | JS | Just List | Filter: " + err_message);
 				} 
 			}
 		}
@@ -126,11 +148,15 @@ function displayScraper_onsubmit()
 				} 
 				else if (document.scraperForm.InCart.checked == true)
 				{
-					alert("URL | No JS | In-cart | Filter: ");
+					alert("URL | No JS | In-cart | Filter: " + err_message);
 				} 
 				else if (document.scraperForm.CSE.checked == true)
 				{
-					alert("URL | No JS | CSE | Filter: ");
+					alert("URL | No JS | CSE | Filter: " + err_message);
+				}
+				else if (document.scraperForm.MV.checked == true)
+				{
+					alert("URL | No JS | MV | Filter: " + err_message);
 				}
 				else 
 				{
@@ -145,11 +171,15 @@ function displayScraper_onsubmit()
 				} 
 				else if (document.scraperForm.InCart.checked == true)
 				{
-					alert("URL | No JS | In-cart | No Filter: ");
+					alert("URL | No JS | In-cart | No Filter: " + err_message);
 				} 
 				else if (document.scraperForm.CSE.checked == true)
 				{
 					alert("URL | No JS | CSE | No Filter: n/neweggbusiness.com_telquest.json");
+				}
+				else if (document.scraperForm.MV.checked == true)
+				{
+					alert("URL | No JS | MV | No Filter: " + err_message);
 				}
 				else 
 				{
@@ -168,7 +198,7 @@ function displayScraper_onsubmit()
 				{
 					if (document.scraperForm.ListAndSale.checked == true) 
 					{
-						alert("Search | DirectToProduct| JS | List+Sale | No Filter: ");
+						alert("Search | DirectToProduct| JS | List+Sale | No Filter: " + err_message);
 					} 
 					else if (document.scraperForm.InCart.checked == true)
 					{
@@ -176,18 +206,22 @@ function displayScraper_onsubmit()
 					} 
 					else if (document.scraperForm.CSE.checked == true)
 					{
-						alert("Search | DirectToProduct| JS | CSE | No Filter: ");
+						alert("Search | DirectToProduct| JS | CSE | No Filter: " + err_message);
+					}
+					else if (document.scraperForm.MV.checked == true)
+					{
+						alert("Search | DirectToProduct| JS | MV | No Filter: " + err_message);
 					}
 					else 
 					{
-						alert("Search | DirectToProduct| JS | Just List | No Filter:");
+						alert("Search | DirectToProduct| JS | Just List | No Filter: " + err_message);
 					} 
 				}
 				else // search listing
 				{
 					if (document.scraperForm.ListAndSale.checked == true) 
 					{
-						alert("Search | Search Listing | JS | List+Sale | No Filter: ");
+						alert("Search | Search Listing | JS | List+Sale | No Filter: " + err_message);
 					} 
 					else if (document.scraperForm.InCart.checked == true)
 					{
@@ -195,11 +229,15 @@ function displayScraper_onsubmit()
 					} 
 					else if (document.scraperForm.CSE.checked == true)
 					{
-						alert("Search | Search Listing | JS | CSE | No Filter: ");
+						alert("Search | Search Listing | JS | CSE | No Filter: " + err_message);
+					}
+					else if (document.scraperForm.MV.checked == true)
+					{
+						alert("Search | DirectToProduct| JS | MV | No Filter: " + err_message);
 					}
 					else 
 					{
-						alert("Search | Search Listing | JS | Just List | No Filter:");
+						alert("Search | Search Listing | JS | Just List | No Filter: " + err_message);
 					} 
 				}
 			}
@@ -219,6 +257,10 @@ function displayScraper_onsubmit()
 					{
 						alert("Search | DirectToProduct| JS | CSE | Filter: m/medizinfuchs.de_eav.json");
 					}
+					else if (document.scraperForm.MV.checked == true)
+					{
+						alert("Search | DirectToProduct| JS | MV | Filter: " + err_message);
+					}
 					else 
 					{
 						alert("Search | DirectToProduct| JS | Just List | Filter: e/expert.fi_verkkokauppa.json");
@@ -232,11 +274,15 @@ function displayScraper_onsubmit()
 					} 
 					else if (document.scraperForm.InCart.checked == true)
 					{
-						alert("Search | Search Listing | JS | In-cart | Filter:");
+						alert("Search | Search Listing | JS | In-cart | Filter: " + err_message);
 					} 
 					else if (document.scraperForm.CSE.checked == true)
 					{
-						alert("Search | Search Listing | JS | CSE | Filter: ");
+						alert("Search | Search Listing | JS | CSE | Filter: " + err_message);
+					}
+					else if (document.scraperForm.MV.checked == true)
+					{
+						alert("Search | Search Listing | JS | MV | Filter: " + err_message);
 					}
 					else 
 					{
@@ -261,7 +307,11 @@ function displayScraper_onsubmit()
 					} 
 					else if (document.scraperForm.CSE.checked == true)
 					{
-						alert("Search | DirectToProduct| No JS | CSE | Filter: ");
+						alert("Search | DirectToProduct| No JS | CSE | Filter: " + err_message);
+					}
+					else if (document.scraperForm.MV.checked == true)
+					{
+						alert("Search | DirectToProduct | No JS | MV | Filter: " + err_message);
 					}
 					else 
 					{
@@ -276,11 +326,15 @@ function displayScraper_onsubmit()
 					} 
 					else if (document.scraperForm.InCart.checked == true)
 					{
-						alert("Search | Search Listing | No JS | In-cart | Filter: ");
+						alert("Search | Search Listing | No JS | In-cart | Filter: " + err_message);
 					} 
 					else if (document.scraperForm.CSE.checked == true)
 					{
-						alert("Search | Search Listing | No JS | CSE | Filter: ");
+						alert("Search | Search Listing | No JS | CSE | Filter: " + err_message);
+					}
+					else if (document.scraperForm.MV.checked == true)
+					{
+						alert("Search | Search Listing | No JS | MV | Filter: " + err_message);
 					}
 					else 
 					{
@@ -294,7 +348,7 @@ function displayScraper_onsubmit()
 				{
 					if (document.scraperForm.ListAndSale.checked == true) 
 					{
-						alert("Search | DirectToProduct| No JS | List+Sale | No Filter: ");
+						alert("Search | DirectToProduct| No JS | List+Sale | No Filter: " + err_message);
 					} 
 					else if (document.scraperForm.InCart.checked == true)
 					{
@@ -302,7 +356,11 @@ function displayScraper_onsubmit()
 					} 
 					else if (document.scraperForm.CSE.checked == true)
 					{
-						alert("Search | DirectToProduct| No JS | CSE | No Filter: ");
+						alert("Search | DirectToProduct| No JS | CSE | No Filter: " + err_message);
+					}
+					else if (document.scraperForm.MV.checked == true)
+					{
+						alert("Search | DirectToProduct | No JS | MV | No Filter: " + err_message);
 					}
 					else 
 					{
@@ -313,7 +371,7 @@ function displayScraper_onsubmit()
 				{
 					if (document.scraperForm.ListAndSale.checked == true) 
 					{
-						alert("Search | Search Listing | No JS | List+Sale | No Filter: ");
+						alert("Search | Search Listing | No JS | List+Sale | No Filter: " + err_message);
 					} 
 					else if (document.scraperForm.InCart.checked == true)
 					{
@@ -321,7 +379,11 @@ function displayScraper_onsubmit()
 					} 
 					else if (document.scraperForm.CSE.checked == true)
 					{
-						alert("Search | Search Listing | No JS | CSE | No Filter: ");
+						alert("Search | Search Listing | No JS | CSE | No Filter: " + err_message);
+					}
+					else if (document.scraperForm.MV.checked == true)
+					{
+						alert("Search | Search Listing | No JS | MV | No Filter: " + err_message);
 					}
 					else 
 					{
